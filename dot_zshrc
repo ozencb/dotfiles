@@ -121,4 +121,4 @@ esac
 
 
 alias vim="nvim"
-alias cgp="chatgpt -p"
+export EDITOR="vim --wait"
