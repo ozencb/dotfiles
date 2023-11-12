@@ -121,4 +121,4 @@ esac
 
 
 alias vim="nvim"
-export EDITOR="vim --wait"
+export EDITOR="nvim --wait"
