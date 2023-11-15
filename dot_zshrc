@@ -116,6 +116,5 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-
 alias vim="nvim"
 export EDITOR=nvim
