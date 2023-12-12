@@ -117,5 +117,6 @@ esac
 # pnpm end
 
 alias vim="nvim"
+alias tm="tmux -u"
 
 export EDITOR=nvim
