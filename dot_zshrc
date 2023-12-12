@@ -117,4 +117,5 @@ esac
 # pnpm end
 
 alias vim="nvim"
+
 export EDITOR=nvim
