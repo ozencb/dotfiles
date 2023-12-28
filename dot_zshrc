@@ -118,5 +118,6 @@ esac
 
 alias vim="nvim"
 alias tm="tmux -u"
+alias nt="vim ~/Developer/vault/Notes && bash ~/Developer/vault/sync.sh"
 
 export EDITOR=nvim
