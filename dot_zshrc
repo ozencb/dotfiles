@@ -121,3 +121,5 @@ alias tm="tmux -u"
 alias nt="vim ~/Developer/vault/Notes && bash ~/Developer/vault/sync.sh"
 
 export EDITOR=nvim
+
+eval $(opam env --switch=default)
