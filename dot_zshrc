@@ -116,7 +116,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-[ -f "/Users/ozenc/.ghcup/env" ] && source "/Users/ozenc/.ghcup/env" # ghcup-env
 
 
 alias vim="nvim"
@@ -126,3 +125,5 @@ alias nt="vim ~/Developer/vault/Notes && bash ~/Developer/vault/sync.sh"
 export EDITOR=nvim
 
 eval $(opam env --switch=default)
+[ -f "/Users/ozenc/.ghcup/env" ] && source "/Users/ozenc/.ghcup/env" # ghcup-env
+
