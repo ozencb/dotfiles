@@ -116,6 +116,9 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+[ -f "/Users/ozenc/.ghcup/env" ] && source "/Users/ozenc/.ghcup/env" # ghcup-env
+
+
 alias vim="nvim"
 alias tm="tmux -u"
 alias nt="vim ~/Developer/vault/Notes && bash ~/Developer/vault/sync.sh"
