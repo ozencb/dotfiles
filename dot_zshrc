@@ -26,7 +26,7 @@ esac
 
 # aliases
 alias vim="nvim"
-alias tm="tmux -u"
+alias tm="tmux -u attach"
 alias nt="vim ~/Developer/vault/Notes && bash ~/Developer/vault/sync.sh"
 
 export EDITOR=nvim
