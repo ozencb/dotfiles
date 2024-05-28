@@ -28,6 +28,7 @@ esac
 alias vim="nvim"
 alias tm="tmux -u attach-session -t oz-session || tmux new-session -s oz-session"
 alias nt="vim ~/Developer/vault/Notes && bash ~/Developer/vault/sync.sh"
+alias lg="lazygit"
 
 export EDITOR=nvim
 
