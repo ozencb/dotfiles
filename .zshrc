@@ -29,7 +29,8 @@ alias vim="nvim"
 alias tm="tmux -u attach-session -t oz-session || tmux new-session -s oz-session"
 alias nt="bash ~/Developer/vault/pull.sh && vim ~/Developer/vault/Notes && bash ~/Developer/vault/sync.sh"
 alias lg="lazygit"
-alias df="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias df="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" # https://web.archive.org/web/20240307132655/https://engineeringwith.kalkayan.com/series/developer-experience/storing-dotfiles-with-git-this-is-the-way/
+
 
 export EDITOR=nvim
 
