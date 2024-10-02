@@ -1,0 +1,20 @@
+[user]
+	name = Özenç Bilgili
+	email = 18405305+ozencb@users.noreply.github.com
+
+[color]
+	ui = auto
+
+[core]
+	editor = nvim
+
+[fetch]
+	prune = true
+
+[alias]
+	aliases = !git config --get-regexp alias | sed -re 's/alias\\.(\\S*)\\s(.*)$/\\1 = \\2/g'
+	dlm = "!git fetch && git branch --merged | egrep -v 'master' | xargs git branch -d"
+	uncommit = reset --soft HEAD~1
+
+[init]
+	defaultBranch = main
