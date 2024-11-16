@@ -30,10 +30,9 @@ alias tm="tmux -u attach-session -t oz-session || tmux new-session -s oz-session
 alias nt="bash ~/Developer/vault/pull.sh && vim ~/Developer/vault/Notes && bash ~/Developer/vault/sync.sh"
 alias lg="lazygit"
 alias df="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" # https://web.archive.org/web/20240307132655/https://engineeringwith.kalkayan.com/series/developer-experience/storing-dotfiles-with-git-this-is-the-way/
-
+alias ob="vim ~/Obsidian"
 
 export EDITOR=nvim
 
 eval $(opam env --switch=default)
 [ -f "/Users/ozenc/.ghcup/env" ] && source "/Users/ozenc/.ghcup/env" # ghcup-env
-
