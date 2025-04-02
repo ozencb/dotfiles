@@ -198,7 +198,7 @@ require('lazy').setup({
       workspaces = {
         {
           name = "Personal",
-          path = "~/Obsidian/Personal",
+          path = "~/Obsidian/OzVault",
         }
       },
 

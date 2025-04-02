@@ -3,6 +3,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Import custom env variables
+[ -f "$HOME/.env_vars" ] && source "$HOME/.env_vars"
+
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -26,11 +29,9 @@ esac
 
 # aliases
 alias vim="nvim"
-alias tm="tmux -u attach-session -t oz-session || tmux new-session -s oz-session"
-alias nt="bash ~/Developer/vault/pull.sh && vim ~/Developer/vault/Notes && bash ~/Developer/vault/sync.sh"
 alias lg="lazygit"
 alias df="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" # https://web.archive.org/web/20240307132655/https://engineeringwith.kalkayan.com/series/developer-experience/storing-dotfiles-with-git-this-is-the-way/
-alias ob="vim ~/Obsidian/Personal"
+alias ob="vim \"$OBSIDIAN_PATH\""
 
 export EDITOR=nvim
 
