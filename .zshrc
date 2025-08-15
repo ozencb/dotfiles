@@ -3,20 +3,38 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
+
+
+
 # Import custom env variables
 [ -f "$HOME/.env_vars" ] && source "$HOME/.env_vars"
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git zsh-autosuggestions nvm)
 
 zstyle ':omz:update' mode auto      # update automatically without asking
 zstyle ':omz:update' frequency 13   # update frequency
 
+# Set Oh My Zsh theme conditionally
+if [[ "$TERM_PROGRAM" == "vscode" || "$TERM_PROGRAM" == "cursor" ]]; then
+  ZSH_THEME=""  # Disable Powerlevel10k for Cursor
+else
+  ZSH_THEME="powerlevel10k/powerlevel10k"
+fi
+
+
 source $ZSH/oh-my-zsh.sh
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Use a minimal prompt in Cursor to avoid command detection issues
+if [[ "$TERM_PROGRAM" == "vscode" ]]; then
+  PROMPT='%n@%m:%~%# '
+  RPROMPT=''
+else
+  [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+fi
 
 # pnpm
 export PNPM_HOME="/Users/ozenc/Library/pnpm"
@@ -35,5 +53,3 @@ alias ob="vim \"$OBSIDIAN_PATH\""
 
 export EDITOR=nvim
 
-eval $(opam env --switch=default)
-[ -f "/Users/ozenc/.ghcup/env" ] && source "/Users/ozenc/.ghcup/env" # ghcup-env
