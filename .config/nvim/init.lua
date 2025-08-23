@@ -201,7 +201,7 @@ require('lazy').setup({
           path = "~/Obsidian/OzVault",
         }
       },
-
+      disable_frontmatter = false,
       -- see below for full list of options 👇
     },
   },

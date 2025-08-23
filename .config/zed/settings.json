@@ -35,5 +35,8 @@
   },
 
   // UI Editor
-  "relative_line_numbers": true
+  "relative_line_numbers": true,
+
+  // AI
+  "disable_ai": true
 }
