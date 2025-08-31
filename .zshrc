@@ -57,8 +57,12 @@ export EDITOR=nvim
 export HISTORY_IGNORE="(export*|ls*|ll*|la*|cd*|pwd|exit|clear|history|bg|fg|top|htop|tmux*|zed*|code*|cursor*|jobs|vim*|nvim*|..|*password*|*secret*|*key*|*token*|*auth*| *)"
 export SAVEHIST=1000
 export HISTFILE="$HOME/.zsh_history"
-setopt hist_ignore_all_dups
-setopt hist_ignore_space
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
 
 zshaddhistory() {
   emulate -L zsh
