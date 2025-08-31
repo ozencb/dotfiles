@@ -53,3 +53,20 @@ alias ob="vim \"$OBSIDIAN_PATH\""
 
 export EDITOR=nvim
 
+# History
+export HISTORY_IGNORE="(export*|ls*|ll*|la*|cd*|pwd|exit|clear|history|bg|fg|top|htop|tmux*|zed*|code*|cursor*|jobs|vim*|nvim*|..|*password*|*secret*|*key*|*token*|*auth*| *)"
+export SAVEHIST=1000
+export HISTFILE="$HOME/.zsh_history"
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+
+zshaddhistory() {
+  emulate -L zsh
+  ## uncomment if HISTORY_IGNORE
+  ## should use EXTENDED_GLOB syntax
+  # setopt extendedglob
+  [[ $1 != ${~HISTORY_IGNORE}[[:space:]] ]]
+}
+
+# Zsh compdump
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
