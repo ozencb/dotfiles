@@ -38,5 +38,5 @@
   "relative_line_numbers": true,
 
   // AI
-  "disable_ai": true
+  "disable_ai": false
 }
