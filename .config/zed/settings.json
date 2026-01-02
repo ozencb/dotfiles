@@ -16,8 +16,8 @@
   // UI theme
   "theme": {
     "mode": "system",
-    "light": "Gruvbox Light Hard",
-    "dark": "Gruvbox Dark Hard",
+    "light": "One Light",
+    "dark": "One Dark",
   },
 
   // UI panels
