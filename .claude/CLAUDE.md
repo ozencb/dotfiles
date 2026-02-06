@@ -14,3 +14,4 @@
 - Use existing project conventions when modifying code
 - Run tests before considering a task complete
 - Don't create documentation files unless explicitly asked
+- Use code comments sparingly, using them only for complex or unclear pieces of code
