@@ -17,7 +17,7 @@
     "bindings": {
       // "j k": "vim::NormalBefore"
       "j j": "vim::NormalBefore",
-      "ç": "editor::ShowCompletions"
+      "cmd '": "editor::ShowCompletions"
     }
   }
 ]

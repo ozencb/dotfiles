@@ -11,7 +11,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 
 # Plugins
-plugins=(git zsh-autosuggestions nvm)
+plugins=(git zsh-autosuggestions)
 
 # ZSH Updates
 zstyle ':omz:update' mode auto      # update automatically without asking
@@ -27,6 +27,14 @@ fi
 
 
 source $ZSH/oh-my-zsh.sh
+
+# Completion settings
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # Case-insensitive
+zstyle ':completion:*' menu select  # Arrow-key navigation
+
+# Directory navigation
+setopt AUTO_PUSHD  # cd builds directory stack, use 'cd -<tab>' to navigate
+setopt PUSHD_IGNORE_DUPS
 
 # Use a minimal prompt in Cursor to avoid command detection issues
 if [[ "$TERM_PROGRAM" == "vscode" ]]; then
@@ -50,12 +58,15 @@ alias vim="nvim"
 alias lg="lazygit"
 alias df="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" # https://web.archive.org/web/20240307132655/https://engineeringwith.kalkayan.com/series/developer-experience/storing-dotfiles-with-git-this-is-the-way/
 alias ob="vim \"$OBSIDIAN_PATH\""
+alias cc="claude"
+alias ...='cd ../..'
+alias ....='cd ../../..'
 
 export EDITOR=nvim
 
 # History
 export HISTORY_IGNORE="(export*|ls*|ll*|la*|cd*|pwd|exit|clear|history|bg|fg|top|htop|tmux*|zed*|code*|cursor*|jobs|vim*|nvim*|..|*password*|*secret*|*key*|*token*|*auth*| *)"
-export SAVEHIST=1000
+export SAVEHIST=10000
 export HISTFILE="$HOME/.zsh_history"
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
@@ -63,6 +74,8 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS
+setopt INC_APPEND_HISTORY_TIME
+setopt HIST_REDUCE_BLANKS
 
 zshaddhistory() {
   emulate -L zsh
@@ -74,3 +87,4 @@ zshaddhistory() {
 
 # Zsh compdump
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+export PATH="$HOME/.local/bin:$PATH"
