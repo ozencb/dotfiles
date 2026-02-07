@@ -9,7 +9,6 @@ fi
 
 export ZSH="$HOME/.oh-my-zsh"
 
-
 # Plugins
 plugins=(git zsh-autosuggestions)
 
@@ -18,15 +17,9 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 zstyle ':omz:update' frequency 13   # update frequency
 
 # Theme
-# Set Oh My Zsh theme conditionally
-if [[ "$TERM_PROGRAM" == "vscode" || "$TERM_PROGRAM" == "cursor" ]]; then
-  ZSH_THEME=""  # Disable Powerlevel10k for Cursor
-else
-  ZSH_THEME="powerlevel10k/powerlevel10k"
-fi
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
-
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
 
 # Completion settings
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # Case-insensitive
@@ -43,6 +36,9 @@ if [[ "$TERM_PROGRAM" == "vscode" ]]; then
 else
   [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 fi
+
+# PATH configuration
+export PATH="$HOME/.local/bin:$PATH"
 
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
@@ -66,6 +62,7 @@ export EDITOR=nvim
 
 # History
 export HISTORY_IGNORE="(export*|ls*|ll*|la*|cd*|pwd|exit|clear|history|bg|fg|top|htop|tmux*|zed*|code*|cursor*|jobs|vim*|nvim*|..|*password*|*secret*|*key*|*token*|*auth*| *)"
+export HISTSIZE=10000
 export SAVEHIST=10000
 export HISTFILE="$HOME/.zsh_history"
 setopt HIST_EXPIRE_DUPS_FIRST
@@ -87,4 +84,3 @@ zshaddhistory() {
 
 # Zsh compdump
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
-export PATH="$HOME/.local/bin:$PATH"
