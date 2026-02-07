@@ -1,0 +1,32 @@
+{
+  "mappings": [
+    {
+      "source": "agents.md",
+      "targets": [
+        "~/.claude/CLAUDE.md"
+      ],
+      "description": "Global agent instructions"
+    },
+    {
+      "source": "skills",
+      "targets": [
+        "~/.claude/skills"
+      ],
+      "description": "Custom Claude skills"
+    },
+    {
+      "source": "hooks",
+      "targets": [
+        "~/.claude/hooks"
+      ],
+      "description": "Claude hooks scripts"
+    },
+    {
+      "source": "keybindings.json",
+      "targets": [
+        "~/.claude/keybindings.json"
+      ],
+      "description": "Claude keybindings"
+    }
+  ]
+}
