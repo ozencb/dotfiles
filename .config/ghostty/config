@@ -3,6 +3,7 @@ command=/bin/zsh -c "tmux attach || tmux"
 background-opacity = 1
 background=#000000
 macos-titlebar-style = hidden
+maximize = true
 
 font-size=18
 font-thicken=true
