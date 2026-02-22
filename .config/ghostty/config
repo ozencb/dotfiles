@@ -9,3 +9,5 @@ font-size=18
 font-thicken=true
 font-thicken-strength=1
 adjust-cell-height=1
+
+quit-after-last-window-closed = true
