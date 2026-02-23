@@ -1,5 +1,9 @@
 command=/bin/zsh -c "tmux attach || tmux"
 
+macos-option-as-alt=true
+
+keybind = alt+space=unbind
+
 background-opacity = 1
 background=#000000
 macos-titlebar-style = hidden
