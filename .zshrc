@@ -51,12 +51,19 @@ esac
 
 # aliases
 alias vim="nvim"
-alias lg="lazygit"
+alias vi="nvim"
 alias df="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" # https://web.archive.org/web/20240307132655/https://engineeringwith.kalkayan.com/series/developer-experience/storing-dotfiles-with-git-this-is-the-way/
 alias ob="vim \"$OBSIDIAN_PATH\""
 alias cc="claude"
-alias ...='cd ../..'
-alias ....='cd ../../..'
+
+alias gaa="git add ."
+alias gcm="git commit -m"
+alias gcb="git checkout -b"
+alias gco="git checkout"
+alias gpr="git pull --rebase"
+alias gsp="git stash pop"
+alias gsd="git stash drop"
+alias gpu="git push --set-upstream origin"
 
 export EDITOR=nvim
 
