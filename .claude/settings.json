@@ -56,7 +56,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "osascript -e 'display notification \"Claude done\" with title \"Claude Code\"'"
+            "command": "afplay /System/Library/Sounds/Glass.aiff"
           }
         ]
       }
@@ -66,7 +66,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "osascript -e 'display notification \"Claude done\" with title \"Claude Code\"'"
+            "command": "afplay /System/Library/Sounds/Glass.aiff"
           }
         ]
       }
