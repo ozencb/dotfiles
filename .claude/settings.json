@@ -49,9 +49,19 @@
       "Read(**/credentials/**)"
     ]
   },
-  "model": "sonnet",
+  "model": "claude-opus-4-6",
   "hooks": {
     "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"Claude done\" with title \"Claude Code\"'"
+          }
+        ]
+      }
+    ],
+    "Notification": [
       {
         "hooks": [
           {
@@ -67,15 +77,33 @@
     "command": "~/.claude/statusline.sh"
   },
   "enabledPlugins": {
-    "frontend-design@claude-plugins-official": false,
-    "code-review@claude-plugins-official": false,
-    "feature-dev@claude-plugins-official": false,
-    "code-simplifier@claude-plugins-official": false,
-    "ralph-loop@claude-plugins-official": false,
-    "typescript-lsp@claude-plugins-official": false,
-    "superpowers@claude-plugins-official": false,
-    "security-guidance@claude-plugins-official": false,
-    "pr-review-toolkit@claude-plugins-official": false
+    "frontend-design@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true,
+    "ralph-loop@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true
   },
-  "promptSuggestionEnabled": false
+  "extraKnownMarketplaces": {
+    "impeccable": {
+      "source": {
+        "source": "github",
+        "repo": "pbakaus/impeccable"
+      }
+    }
+  },
+  "promptSuggestionEnabled": false,
+  "autoCompactEnabled": false,
+  "terminalProgressBarEnabled": false,
+  "mcpServers": {
+    "freecad": {
+      "command": "uvx",
+      "args": ["freecad-mcp", "--host", "192.168.0.12"]
+    }
+  }
 }
