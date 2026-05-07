@@ -29,6 +29,7 @@
 - Only commit when explicitly asked
 - Use conventional commit messages matching the project's style
 - Stage specific files by name, not `git add .` or `git add -A`
+- Do not add co-author
 
 # What to Avoid
 - Don't create documentation files unless requested
