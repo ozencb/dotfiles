@@ -98,12 +98,20 @@
     }
   },
   "promptSuggestionEnabled": false,
+  "awaySummaryEnabled": false,
+  "editorMode": "normal",
   "autoCompactEnabled": false,
   "terminalProgressBarEnabled": false,
   "mcpServers": {
-    "freecad": {
-      "command": "uvx",
-      "args": ["freecad-mcp", "--host", "192.168.0.12"]
+    "godot": {
+      "command": "node",
+      "args": [
+        "/absolute/path/to/godot-mcp/build/index.js"
+      ],
+      "env": {
+        "GODOT_PATH": "/path/to/godot",
+        "DEBUG": "true"
+      }
     }
   }
 }
