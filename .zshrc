@@ -52,6 +52,7 @@ esac
 # aliases
 alias vim="nvim"
 alias vi="nvim"
+alias docker="podman"
 alias df="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" # https://web.archive.org/web/20240307132655/https://engineeringwith.kalkayan.com/series/developer-experience/storing-dotfiles-with-git-this-is-the-way/
 alias ob="vim \"$OBSIDIAN_PATH\""
 alias cc="claude"
@@ -64,6 +65,8 @@ alias gpr="git pull --rebase"
 alias gsp="git stash pop"
 alias gsd="git stash drop"
 alias gpu="git push --set-upstream origin"
+
+killport() { kill $(lsof -t -i:"$1"); }
 
 export EDITOR=nvim
 
@@ -91,3 +94,7 @@ zshaddhistory() {
 
 # Zsh compdump
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
