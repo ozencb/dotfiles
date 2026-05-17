@@ -65,6 +65,29 @@ alias gpr="git pull --rebase"
 alias gsp="git stash pop"
 alias gsd="git stash drop"
 alias gpu="git push --set-upstream origin"
+alias gs="git status"
+alias gl="git log --oneline -20"
+alias gd="git diff"
+alias gds="git diff --staged"
+alias grb="git rebase"
+alias grc="git rebase --continue"
+alias gra="git rebase --abort"
+
+alias pi="pnpm install"
+alias pd="pnpm dev"
+alias pb="pnpm build"
+alias pt="pnpm test"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ll="ls -la"
+
+alias hosts="sudo nvim /etc/hosts"
+alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+alias ip="curl -s ifconfig.me"
+alias ports="lsof -i -P -n | grep LISTEN"
+
+alias nukemodules="find . -name 'node_modules' -type d -prune -exec rm -rf {} +"
 
 killport() { kill $(lsof -t -i:"$1"); }
 
