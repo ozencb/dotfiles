@@ -73,7 +73,6 @@ alias grb="git rebase"
 alias grc="git rebase --continue"
 alias gra="git rebase --abort"
 
-alias pi="pnpm install"
 alias pd="pnpm dev"
 alias pb="pnpm build"
 alias pt="pnpm test"
@@ -88,6 +87,8 @@ alias ip="curl -s ifconfig.me"
 alias ports="lsof -i -P -n | grep LISTEN"
 
 alias nukemodules="find . -name 'node_modules' -type d -prune -exec rm -rf {} +"
+
+alias brm="brew update && brew upgrade && brew autoremove && brew cleanup"
 
 killport() { kill $(lsof -t -i:"$1"); }
 
@@ -121,3 +122,12 @@ export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/ozenc/.local/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/ozenc/.lmstudio/bin"
+# End of LM Studio CLI section
+
