@@ -55,6 +55,10 @@ alias vi="nvim"
 alias docker="podman"
 alias df="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME" # https://web.archive.org/web/20240307132655/https://engineeringwith.kalkayan.com/series/developer-experience/storing-dotfiles-with-git-this-is-the-way/
 alias ob="vim \"$OBSIDIAN_PATH\""
+alias obc="cd \"$OBSIDIAN_PATH\" && claude"
+# Claude multi-account
+alias cc1="claude"
+alias cc2="CLAUDE_CONFIG_DIR=$HOME/.claude-2 claude"
 alias cc="claude"
 
 alias gaa="git add ."
@@ -127,7 +131,5 @@ export NVM_DIR="$HOME/.nvm"
 # Added by Antigravity CLI installer
 export PATH="/Users/ozenc/.local/bin:$PATH"
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/ozenc/.lmstudio/bin"
-# End of LM Studio CLI section
+alias love='/Applications/love.app/Contents/MacOS/love'
 
