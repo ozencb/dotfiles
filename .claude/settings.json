@@ -57,6 +57,10 @@
           {
             "type": "command",
             "command": "afplay /System/Library/Sounds/Glass.aiff"
+          },
+          {
+            "type": "command",
+            "command": "[ -z \"$TMUX_PANE\" ] || tmux set -w -t \"$TMUX_PANE\" @claude \"✓\""
           }
         ]
       }
@@ -67,6 +71,20 @@
           {
             "type": "command",
             "command": "afplay /System/Library/Sounds/Glass.aiff"
+          },
+          {
+            "type": "command",
+            "command": "[ -z \"$TMUX_PANE\" ] || tmux set -w -t \"$TMUX_PANE\" @claude \"!\""
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -z \"$TMUX_PANE\" ] || tmux set -wu -t \"$TMUX_PANE\" @claude"
           }
         ]
       }
